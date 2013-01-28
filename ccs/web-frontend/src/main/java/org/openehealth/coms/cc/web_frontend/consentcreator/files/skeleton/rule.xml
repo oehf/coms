@@ -1,0 +1,35 @@
+<Rule RuleId="" Effect="Permit">
+	<Description>
+	</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+						
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:organisation" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+					
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+						
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Actions>
+			
+		</Actions>
+	</Target>
+</Rule>

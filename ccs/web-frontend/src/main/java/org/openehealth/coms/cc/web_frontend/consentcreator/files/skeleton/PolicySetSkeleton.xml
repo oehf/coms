@@ -1,0 +1,58 @@
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os http://docs.oasis-open.org/xacml/access_control-xacml-2.0-policy-schema-os.xsd" PolicySetId="" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:first-applicable">
+	<Description>
+	</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Actions>
+			<Action>
+				<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+					write 
+					</AttributeValue>
+					<ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</ActionMatch>
+			</Action>
+			<Action>
+				<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+					read
+					</AttributeValue>
+					<ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</ActionMatch>
+			</Action>
+		</Actions>
+	</Target>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:4" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target>
+		</Target>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:3" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target>
+		</Target>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:2" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target>
+		</Target>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:1" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target>
+		</Target>
+	</Policy>
+</PolicySet>

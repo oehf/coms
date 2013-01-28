@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.openehealth.coms.cms</groupId>
+  <artifactId>cms</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>CMS - Consent Management Service</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <url>http://www.openehealth.org/display/COMS/Consent+Management+Service</url>
+  <scm>
+  	<url>https://github.com/oehf/coms/cms</url>
+  </scm>
+  <organization>
+  	<name>Open eHealth Foundation</name>
+  	<url>http://www.openehealth.org</url>
+  </organization>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <modules>
+    <module>ipf-core</module>
+    <module>database</module>
+  </modules>
+</project>

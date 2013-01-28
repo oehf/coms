@@ -1,0 +1,51 @@
+<Rule RuleId="" Effect="Deny">
+	<Description>
+		Meine Dokumente, welche an Organisationen des ISIS Projektes anfallen, dürfen nicht in ISIS eingestellt und bereits eingestellte Dokumente nicht gelesen werden.
+	</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+						
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:organisation" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+					
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+						
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Actions>
+			<Action>
+				<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+						write
+					</AttributeValue>
+					<ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</ActionMatch>
+			</Action>
+			<Action>
+				<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+						read
+					</AttributeValue>
+					<ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</ActionMatch>
+			</Action>
+		</Actions>
+	</Target>
+</Rule>

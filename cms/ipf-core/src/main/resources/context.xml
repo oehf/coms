@@ -1,0 +1,116 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:camel="http://camel.apache.org/schema/spring"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/lang 
+http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+http://camel.apache.org/schema/spring 
+http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<camel:camelContext id="camelContext">
+		<camel:routeBuilder ref="mainRouteBuilder" />
+		<camel:routeBuilder ref="fileInputRouteBuilder" />
+		<camel:routeBuilder ref="httpInputRouteBuilder" />
+		<camel:routeBuilder ref="httpsInputRouteBuilder" />
+		<camel:routeBuilder ref="mllpInputRouteBuilder" />
+		<camel:routeBuilder ref="fileOutputRouteBuilder" />
+		<camel:routeBuilder ref="httpOutputRouteBuilder" />
+		<camel:routeBuilder ref="httpsOutputRouteBuilder" />
+		<camel:routeBuilder ref="mllpOutputRouteBuilder" />
+		<camel:routeBuilder ref="msgLoggerRouteBuilder" />
+		<camel:routeBuilder ref="mdmRouteBuilder" />
+		<camel:routeBuilder ref="qbpRouteBuilder" />
+	</camel:camelContext>
+
+	<bean id="mainRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.MainRouteBuilder">
+	</bean>
+
+	<bean id="fileInputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.inbound.FileInput">
+	</bean>
+
+	<bean id="httpInputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.inbound.HTTPInput">
+	</bean>
+
+	<bean id="httpsInputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.inbound.HTTPSInput">
+	</bean>
+
+	<bean id="mllpInputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.inbound.MLLPInput">
+	</bean>
+
+	<bean id="fileOutputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.outbound.FileOutput">
+	</bean>
+
+	<bean id="httpOutputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.outbound.HTTPOutput">
+	</bean>
+
+	<bean id="httpsOutputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.outbound.HTTPSOutput">
+	</bean>
+
+	<bean id="mllpOutputRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.outbound.MLLPOutput">
+	</bean>
+
+	<bean id="msgLoggerRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.communication.outbound.MsgLogger">
+	</bean>
+
+	<bean id="mdmRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.routes.mdm.MDMRouteBuilder">
+	</bean>
+	
+	<bean id="qbpRouteBuilder" depends-on="routeModelExtender"
+		class="org.openehealth.coms.cms.ipf_core.routes.qbp.QBPRouteBuilder">
+	</bean>
+
+	<bean id="coreModelExtension"
+		class="org.openehealth.ipf.platform.camel.core.extend.CoreModelExtension">
+	</bean>
+
+	<bean id="hl7ModelExtension"
+		class="org.openehealth.ipf.platform.camel.hl7.extend.Hl7ModelExtension" />
+
+	<bean id="hapiModelExtension"
+		class="org.openehealth.ipf.modules.hl7.extend.HapiModelExtension">
+	</bean>
+
+	<bean id="routeModelExtender"
+		class="org.openehealth.ipf.platform.camel.core.extend.DefaultModelExtender">
+		<property name="routeModelExtensions">
+			<list>
+				<ref bean="coreModelExtension" />
+				<ref bean="hl7ModelExtension" />
+				<ref bean="hapiModelExtension" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mllpStoreCodec"
+		class="org.openehealth.ipf.platform.camel.lbs.mina.mllp.MllpStoreCodec">
+		<constructor-arg ref="resourceFactory" />
+		<constructor-arg ref="camelContext" />
+	</bean>
+
+	<bean id="largeBinaryStore" class="org.openehealth.ipf.commons.lbs.store.DiskStore">
+		<constructor-arg value="target/tempstore" />
+	</bean>
+
+	<bean id="resourceFactory"
+		class="org.openehealth.ipf.commons.lbs.resource.ResourceFactory">
+		<constructor-arg ref="largeBinaryStore" />
+		<constructor-arg value="unnamed" />
+	</bean>
+
+	<bean id="hl7FileFilter" class="org.openehealth.coms.cms.ipf_core.filefilter.HL7FileFilter">
+	</bean>
+
+</beans>

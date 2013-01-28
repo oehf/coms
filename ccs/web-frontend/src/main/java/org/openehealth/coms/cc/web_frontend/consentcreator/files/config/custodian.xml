@@ -1,0 +1,15 @@
+<custodian>
+	<assignedCustodian>
+		<representedCustodianOrganization>
+			<id extension="" root=""/>
+			<name></name>
+			<addr>
+				<streetAddressLine></streetAddressLine>
+				<city></city>
+				<state></state>
+				<postalCode></postalCode>
+				<country></country>
+			</addr>
+		</representedCustodianOrganization>
+	</assignedCustodian>
+</custodian>

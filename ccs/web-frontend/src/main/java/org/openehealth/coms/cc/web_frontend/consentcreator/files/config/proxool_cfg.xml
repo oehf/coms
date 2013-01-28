@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <proxool>
+    <alias>consentCreator</alias>
+    <driver-url>jdbc:postgresql://192.168.178.5:5432/consentCreator</driver-url>
+    <driver-class>org.postgresql.Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="postgres"/>
+      <property name="password" value="misadmin99"/>
+    </driver-properties>
+    <maximum-connection-count>50</maximum-connection-count>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+    <trace>true</trace>
+  </proxool>

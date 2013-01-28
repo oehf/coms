@@ -1,0 +1,7 @@
+/* AUTOMATICALLY GENERATED ON Sat Jan 15 15:31:18 CET 2011*/
+/* DO NOT EDIT */
+
+grant codeBase "http://localhost:8080/Diplomarbeit/applet/-" {
+  permission java.security.AllPermission;
+};
+

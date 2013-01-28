@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 schemas/Consent_CDA.xsd">
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId root="1.3.6.1.4.1.19376.1.2.20"/>
+	<id extension="" root=""/>
+	<code code="59284-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Consent Document Patient"/>
+	<title></title>
+	<effectiveTime value=""/> 
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="de-DE"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="" root=""/>
+			<addr>
+				<streetAddressLine></streetAddressLine>
+				<city></city>
+				<state></state>
+				<postalCode></postalCode>
+				<country></country>
+			</addr>
+			<patient>
+				<name>
+					<prefix></prefix>
+					<given></given>
+					<family></family>
+				</name>
+				<administrativeGenderCode code="" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value=""/>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<documentationOf>
+		<serviceEvent >
+			<effectiveTime>
+				<low value="19800127"/>
+				<high value="19990522"/>
+			</effectiveTime>
+		</serviceEvent>
+	</documentationOf>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<id extension="12345" root="1.2.3.4.5.6.7"/>
+					<code code="57016-8" codeSystem="2.16.840.1.113883.6.1" displayName="Privacy Policy Acknowledge Dokument"/>
+					<title>Darstellung des PolicySets zur Umwandlung in ein PDF mittels xsl:fo</title>
+					<textRep>
+						<header>Einrichtungsübergreifende elektronische Patientenakte ISIS <br/> Einwilligungserklärung
+						</header>
+						<main>Ich wurde über die Möglichkeit der Inanspruchnahme einer einrichtungsübergreifenden elektronischen Patientenakte im Rahmen des Intersektoralen Informationssystems (ISIS) ausführlich informiert. Ich erhielt eine schriftliche Patienteninformation und habe diese gelesen. Darüber hinaus wurde ich mündlich aufgeklärt und erhielt gestellte Fragen beantwortet. <br/> Insbesondere wurde ich über Folgendes informiert:
+						</main>
+						<liste>
+							<listitem>Als ISIS-Teilnehmer wird für mich eine arztgeführte einrichtungsübergreifende elektronische Patientenakte angelegt. Hierin werden Daten und Dokumente zu meinen Behandlungen dauerhaft (bis zu Widerruf oder Ableben) gespeichert. Diese Speicherung erfolgt neben der offiziellen ärztlichen Dokumentation der mich behandelnden Ärzte in ihren Häusern.
+							</listitem>
+							<listitem>Über die ISIS-Patientenakte können Ärzte und soweit erforderlich ihr Assistenzpersonal aus den mich behandelnden Fachabteilungen der von mir zugelassenen Krankenhäuser und Arztpraxen (Einrichtungen) auf meine verfügbaren Behandlungsdaten wie Diagnosen, Befunde, Berichte und administrative Daten zugreifen soweit dies für meine Versorgung erforderlich ist.
+							</listitem>
+							<listitem>Der Zugriff auf meine Daten wird für Fachabteilungen der nachstehenden Einrichtungen gemäß der Formulierungen der jeweiligen Datenschutzregeln ermöglicht oder verwehrt. Mir ist bekannt, dass ich bei weiteren behandelnden Einrichtungen eine neue, erweiterte Erklärung abgeben kann und/oder diese Berechtigungen auch jederzeit einschränken kann. <Datenschutzregeln/>
+							</listitem>
+							<listitem>Die ISIS-Patientenakte wird im Auftrag der teilnehmenden Krankenhäuser und Arztpraxen durch einen Betreiber  verarbeitet (derzeit das Universitätsklinikum Heidelberg). Bei einem Betreiberwechsel erhalte ich rechtzeitig vorher Nachricht.
+							</listitem>
+							<listitem>Ich kann mich zur Wahrnehmung meiner Rechte wie Auskunft, Einsicht, Sperrung, Widerruf an meinen behandelnden Arzt in einem der ISIS-Häuser oder die in der Aufklärung genannten Kontakte wenden. Im Falle eines Widerrufs werden meine bereits in der ISIS-Akte gespeicherten Daten gelöscht.
+							</listitem>
+						</liste>
+						<header2><b>Erklärung:</b>
+						</header2>
+						<consent><b>Ich bin einverstanden</b>, dass meine Daten in der dargestellten Weise verarbeitet und genutzt werden. Soweit dies für meine Versorgung und die Verwaltung der ISIS-Patientenakte erforderlich ist, <b>entbinde ich</b> meine behandelnden Ärzte und ihr Assistenzpersonal <b>von ihrer Schweigepflicht</b>. <br/> Diese Erklärung erfolgt <b>freiwillig</b> und kann jederzeit <b>widerrufen</b> werden. Eine Nichterteilung der Einwilligung oder ein Widerruf hat - bis auf den Verzicht der Vorteile von ISIS - keine nachteilige Wirkung auf meine Behandlung. Ich bin informiert, dass ich stattdessen auch vorübergehend alle Zugriffsrechte sperren lassen kann. <br/> Eine Mehrfertigung dieser Erklärung habe ich erhalten.
+						</consent>
+						<tabelle1>
+							<ort>Heidelberg, den
+							</ort>
+							<u1>Unterschrift Patient
+							</u1>
+							<u2>Unterschrift Aufklärender
+							</u2>
+							<u3>Ggf. Unterschrift gesetzl. Vertreter
+							</u3>
+						</tabelle1>
+						<vermerk>Verwaltungsvermerk:
+						</vermerk>
+						<tabelle2>
+							<n1>Obiger Patient wurde aufgeklärt nach den Richtlinien der Kurzaufklärung Version 1.0
+							</n1>
+							<n2>Das Einwilligungskennzeichen im KIS wurde entsprechend der Einwilligung gesetzt
+							</n2>
+							<n3><r>Datum</r>/Kürzel Aufklärender
+							</n3>
+						</tabelle2>
+					</textRep>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

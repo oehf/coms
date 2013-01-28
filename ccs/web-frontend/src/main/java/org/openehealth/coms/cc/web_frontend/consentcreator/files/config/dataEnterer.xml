@@ -1,0 +1,14 @@
+<dataEnterer>
+	<templateId root="1.3.6.1.4.1.19376.1.2.20.3"/>
+	<time value=""/>
+	<assignedEntity>
+		<id extension="" root=""/>
+		<assignedPerson>
+			<name>
+				<prefix></prefix>
+				<given></given>
+				<family></family>
+			</name>
+		</assignedPerson>
+	</assignedEntity>
+</dataEnterer>

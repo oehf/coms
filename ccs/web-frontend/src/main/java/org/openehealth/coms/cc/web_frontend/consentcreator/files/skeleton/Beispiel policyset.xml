@@ -1,0 +1,138 @@
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os http://docs.oasis-open.org/xacml/access_control-xacml-2.0-policy-schema-os.xsd" PolicySetId="" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:first-applicable">
+	<Description>Dies ist die Einwilligungserklärung von Homo Heidelbergensis</Description>
+	<Target/>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:4" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target/>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:3" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target/>
+		<Rule Effect="Permit" RuleId="1317563563839">
+			<Description>Alle Krankenschwestern der Organisation Universitätsklinikum Heidelberg dürfen alle meine, in ISIS verfügbaren, Laborberichte lesen.</Description>
+			<Target>
+				<Subjects>
+					<Subject>
+						<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">1.1.1.2.745.0.76.3.1.999</AttributeValue>
+							<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:organisation" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+						</SubjectMatch>
+						<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">NURSE</AttributeValue>
+							<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+						</SubjectMatch>
+					</Subject>
+				</Subjects>
+				<Resources>
+					<Resource>
+						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">1.0.10.1.101.3@ZIMT-STABR</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+						</ResourceMatch>
+					</Resource>
+				</Resources>
+				<Actions>
+			
+				<Action><ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue><ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/></ActionMatch></Action></Actions>
+			</Target>
+		</Rule>
+	</Policy>
+	<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:2" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+<Target/>
+<Rule Effect="Permit" RuleId="1317563557116">
+	<Description>Alle Ärzte der Organisation Kreiskrankenhaus Schwetzingen dürfen meine, in ISIS verf�gbaren, Dokumente lesen.</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">1.1.1.2.745.0.76.3.1.111</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:organisation" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">PHYISICAN</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">1.0.10.1.101.3</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Actions>
+			
+		<Action><ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue><ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/></ActionMatch></Action></Actions>
+	</Target>
+</Rule>
+
+
+
+
+		<Rule Effect="Permit" RuleId="1317563563839">
+			<Description>Die Organisation Arztpraxis Karcher darf alle meine Dokumente in ISIS lesen.</Description>
+			<Target>
+				<Subjects>
+					<Subject>
+						<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">1.1.1.2.745.0.76.3.1.666</AttributeValue>
+							<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:organisation" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+						</SubjectMatch>
+						<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"/>
+							<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+						</SubjectMatch>
+					</Subject>
+				</Subjects>
+				<Resources>
+					<Resource>
+						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">1.0.10.1.101.3</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+						</ResourceMatch>
+					</Resource>
+				</Resources>
+				<Actions>
+			
+				<Action><ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue><ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/></ActionMatch></Action></Actions>
+			</Target>
+		</Rule>
+
+
+</Policy>
+	
+
+
+<Policy PolicyId="urn:oasis:names:tc:xacml:2.0:example:policyid:1" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+		<Target/>
+	<Rule Effect="Permit" RuleId="1317563546933">
+	<Description>Alle Organisationen dürfen alle meine Dokumente in ISIS lesen.</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"/>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:organisation" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"/>
+					<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"/>
+					<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Actions>
+			
+		<Action><ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue><ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/></ActionMatch></Action></Actions>
+	</Target>
+</Rule>
+
+	</Policy>
+</PolicySet>

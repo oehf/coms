@@ -1,0 +1,70 @@
+2013-01-25 10:30:44.580::INFO:  Starting up IPF-Core...
+2013-01-25 10:30:44.631::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:30:44.660::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1571dff: startup date [Fri Jan 25 10:30:44 CET 2013]; root of context hierarchy
+2013-01-25 10:30:44.726::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:30:45.010::INFO:  OSGi environment not detected.
+2013-01-25 10:30:45.376::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:30:45.381::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:31:40.813::INFO:  Starting up IPF-Core...
+2013-01-25 10:31:40.863::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:31:40.890::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@726693: startup date [Fri Jan 25 10:31:40 CET 2013]; root of context hierarchy
+2013-01-25 10:31:40.953::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:31:41.237::INFO:  OSGi environment not detected.
+2013-01-25 10:31:41.650::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:31:41.657::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:33:09.670::INFO:  Starting up IPF-Core...
+2013-01-25 10:33:09.720::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:33:09.752::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5dd915: startup date [Fri Jan 25 10:33:09 CET 2013]; root of context hierarchy
+2013-01-25 10:33:09.817::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:33:10.149::INFO:  OSGi environment not detected.
+2013-01-25 10:33:10.508::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:33:10.516::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:35:21.179::INFO:  Starting up IPF-Core...
+2013-01-25 10:35:21.233::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:35:21.259::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a06d25: startup date [Fri Jan 25 10:35:21 CET 2013]; root of context hierarchy
+2013-01-25 10:35:21.322::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:35:21.625::INFO:  OSGi environment not detected.
+2013-01-25 10:35:22.014::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:35:22.021::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:40:25.416::INFO:  Starting up IPF-Core...
+2013-01-25 10:40:25.466::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:40:25.499::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5dd915: startup date [Fri Jan 25 10:40:25 CET 2013]; root of context hierarchy
+2013-01-25 10:40:25.570::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:40:25.870::INFO:  OSGi environment not detected.
+2013-01-25 10:40:26.226::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:40:26.233::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:42:01.168::INFO:  Starting up IPF-Core...
+2013-01-25 10:42:01.216::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:42:01.241::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1571dff: startup date [Fri Jan 25 10:42:01 CET 2013]; root of context hierarchy
+2013-01-25 10:42:01.304::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:42:01.617::INFO:  OSGi environment not detected.
+2013-01-25 10:42:01.977::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:42:01.984::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:46:44.555::INFO:  Starting up IPF-Core...
+2013-01-25 10:46:44.606::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:46:44.635::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1571dff: startup date [Fri Jan 25 10:46:44 CET 2013]; root of context hierarchy
+2013-01-25 10:46:44.704::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:46:44.985::INFO:  OSGi environment not detected.
+2013-01-25 10:46:45.348::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:46:45.355::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:47:48.758::INFO:  Starting up IPF-Core...
+2013-01-25 10:47:48.810::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:47:48.836::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@a06d25: startup date [Fri Jan 25 10:47:48 CET 2013]; root of context hierarchy
+2013-01-25 10:47:48.900::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:47:49.186::INFO:  OSGi environment not detected.
+2013-01-25 10:47:49.548::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:47:49.556::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:49:06.783::INFO:  Starting up IPF-Core...
+2013-01-25 10:49:06.832::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:49:06.859::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5dd915: startup date [Fri Jan 25 10:49:06 CET 2013]; root of context hierarchy
+2013-01-25 10:49:06.921::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:49:07.203::INFO:  OSGi environment not detected.
+2013-01-25 10:49:07.593::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:49:07.600::INFO:  Received hang up - stopping the main instance.
+2013-01-25 10:53:15.704::INFO:  Starting up IPF-Core...
+2013-01-25 10:53:15.753::INFO:  Apache Camel 2.5.0 starting
+2013-01-25 10:53:15.781::INFO:  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5dd915: startup date [Fri Jan 25 10:53:15 CET 2013]; root of context hierarchy
+2013-01-25 10:53:15.847::INFO:  Loading XML bean definitions from class path resource [context.xml]
+2013-01-25 10:53:16.138::INFO:  OSGi environment not detected.
+2013-01-25 10:53:16.503::INFO:  Apache Camel 2.5.0 stopping
+2013-01-25 10:53:16.510::INFO:  Received hang up - stopping the main instance.

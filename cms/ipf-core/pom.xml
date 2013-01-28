@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>cms</artifactId>
+		<groupId>org.openehealth.coms.cms</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>org.openehealth.coms.cms.ipf_core</groupId>
+	<artifactId>ipf-core</artifactId>
+	<name>ipf-core</name>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.openehealth.ipf</groupId>
+				<artifactId>ipf</artifactId>
+				<version>2.2.5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.openehealth.ipf.platform-camel</groupId>
+			<artifactId>platform-camel-core</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openehealth.ipf.platform-camel</groupId>
+			<artifactId>platform-camel-hl7</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openehealth.ipf.platform-camel</groupId>
+			<artifactId>platform-camel-lbs-mina</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v251</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>net.iharder</groupId>
+			<artifactId>base64</artifactId>
+			<version>2.3.8</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<!-- This seems to be the only way to add the .groovy source files -->
+				<!-- in src/main/groovy to the Eclipse build path. -->
+				<!-- The source files have to be excluded binaries explicitly (see maven-jar-plugin 
+					config). -->
+				<directory>src/main/groovy</directory>
+			</resource>
+			<resource>
+				<directory>.</directory>
+				<includes>
+					<include>META-INF/**/*</include>
+				</includes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/bin.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.gmaven</groupId>
+				<artifactId>gmaven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generateStubs</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>generateStubs</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>testCompile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<projectnatures>
+						<projectnature>org.eclipse.jdt.core.javanature</projectnature>
+						<projectnature>org.eclipse.jdt.groovy.core.groovyNature</projectnature>
+					</projectnatures>
+					<downloadSources>true</downloadSources>
+					<ajdtVersion>none</ajdtVersion>
+					<classpathContainers>
+						<classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+						<!-- Add explicitly the groovy libs. Groovy nature alone seems not 
+							to be enough. -->
+						<classpathContainer>GROOVY_SUPPORT</classpathContainer>
+					</classpathContainers>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>openehealth.releases</id>
+			<name>Open eHealth Maven Repository</name>
+			<url>http://repo.openehealth.org/maven2/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>openehealth.snapshots</id>
+			<name>Open eHealth Maven Repository</name>
+			<url>http://repo.openehealth.org/maven2/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>codehaus nexus</id>
+			<name>Codehaus Nexus Maven Repository</name>
+			<url>https://nexus.codehaus.org/content/repositories/releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>codehaus</id>
+			<name>Codehaus Maven Repository</name>
+			<url>http://repository.codehaus.org</url>
+		</repository>
+		<repository>
+			<id>java.net</id>
+			<name>java.net Maven Repository</name>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+		<repository>
+			<id>jboss</id>
+			<name>JBoss Maven Repository</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+		<repository>
+			<id>hapi-sf</id>
+			<name>HAPI Sourceforge Repository</name>
+			<url>http://hl7api.sourceforge.net/m2</url>
+		</repository>
+	</repositories>
+	<properties>
+		<project.build.sourceEncoding>
+			UTF-8
+		</project.build.sourceEncoding>
+	</properties>
+
+
+
+	<url>http://www.openehealth.org/display/COMS/Consent+Management+Service</url>
+</project>

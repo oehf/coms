@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsentDocumentList>
+	<setId extension="987654321" root="2.16.840.1.113883.19"/>
+	<ConsentDocument>
+		<id extension="123456789" root="2.16.840.1.113883.19"/>
+		<effectiveTime value="201010181531"/>
+		<versionNumber value="1"/>
+	</ConsentDocument>
+	<ConsentDocument>
+		<id extension="123456789" root="2.16.840.1.113883.19"/>
+		<effectiveTime value="201010181531"/>
+		<versionNumber value="1"/>
+	</ConsentDocument>
+</ConsentDocumentList>

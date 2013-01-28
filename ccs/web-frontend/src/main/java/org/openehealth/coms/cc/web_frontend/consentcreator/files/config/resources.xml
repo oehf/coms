@@ -1,0 +1,5 @@
+<resources>
+	<resource name="Alle" oid="1.0.10.1.101.3"/>
+	<resource name="Arztbriefe" oid="1.0.10.1.101.3@MEDI-AENDG"/>
+	<resource name="Laborberichte" oid="1.0.10.1.101.3@ZIMT-STABR"/>
+</resources>

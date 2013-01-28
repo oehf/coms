@@ -1,0 +1,15 @@
+<legalAuthenticator>
+	<time value=""/>
+	<signatureCode code="S"/>
+	<assignedEntity>
+		<id extension="" root=""/>
+		<assignedPerson>
+			<name>
+				<prefix></prefix>
+				<given></given>
+				<family></family>
+				<suffix></suffix>
+			</name>
+		</assignedPerson>
+	</assignedEntity>
+</legalAuthenticator>

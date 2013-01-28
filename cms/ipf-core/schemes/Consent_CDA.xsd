@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Markus Birkle (ZIM UKHD) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" targetNamespace="urn:hl7-org:v3" elementFormDefault="qualified">
+	<xs:include schemaLocation="CDA.xsd"/>
+	<!--
+	Definition of the assignedWetSignature as additon of the assignedEntity element.
+	-->
+	<xs:redefine schemaLocation="POCD_MT000040.xsd">
+		<xs:complexType name="POCD_MT000040.AssignedEntity">
+			<xs:complexContent>
+				<xs:extension base="POCD_MT000040.AssignedEntity">
+					<xs:sequence>
+						<xs:element name="assignedWetSignature" type="Consent_CDA.AssignedWetSignature"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	<!--
+	Definition of the assignedWetSignature as addition of the assignedEntity element.
+	-->
+	<xs:redefine schemaLocation="POCD_MT000040.xsd">
+		<xs:complexType name="POCD_MT000040.Section">
+			<xs:complexContent>
+				<xs:extension base="POCD_MT000040.Section">
+					<xs:sequence>
+						<xs:element name="consented" type="Consent_CDA.Consented"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	<!--
+	Definition of new datatyps for the consent CDA
+	-->
+	<xs:complexType name="Consent_CDA.AssignedWetSignature">
+		<xs:sequence>
+			<xs:element name="text" type="ED"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Consent_CDA.Consented">
+		<xs:attribute name="value" type="xs:boolean" use="required"/>
+	</xs:complexType>
+</xs:schema>
